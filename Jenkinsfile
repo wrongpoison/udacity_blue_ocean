@@ -9,9 +9,9 @@ pipeline {
         steps {
           withAWS(region:'us-west-2',credentials:'udacity c3 aws creds') {
             s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'udacitydevops3cicd')
-          }
+            }
         }
       }
     }
-}
+    }
 }
